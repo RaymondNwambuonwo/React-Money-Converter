@@ -6,11 +6,17 @@ const Link = "https://api.exchangeratesapi.io/latest";
 
 function App() {
   const [currencyOptions, setCurrencyOptions] = useState([]);
+  const [fromCurrency, setFromCurrency] = useState();
+  const [toCurrency, setToCurrency] = use();
+
   useEffect(() => {
     fetch(Link)
       .then((res) => res.json())
       .then((data) => {
+        const firstCurrency = Object.keys(data.rates)[0];
         setCurrencyOptions([data.base, ...Object.keys(data.rates)]);
+        setFromCurrency(data.base);
+        setToCurrency(firstCurrency);
       });
   }, []);
   return (
