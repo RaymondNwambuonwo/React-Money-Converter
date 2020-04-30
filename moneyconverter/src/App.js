@@ -33,6 +33,16 @@ function App() {
       });
   }, []);
 
+  function handleFromAmountChange(e) {
+    setAmount(e.target.value);
+    setAmountInFromCurrency(true);
+  }
+
+  function handleToAmountChange(e) {
+    setAmount(e.target.value);
+    setAmountInFromCurrency(false);
+  }
+
   return (
     <>
       <h1>Convert Amount</h1>
@@ -48,6 +58,7 @@ function App() {
         currencyOptions={currencyOptions}
         selectedCurrency={toCurrency}
         onChangeCurrency={(e) => setToCurrency(e.target.value)}
+        onChangeAmount={handleToAmountChange}
         amount={toAmount}
       />
     </>
