@@ -5,16 +5,20 @@ import "./App.css";
 const Link = "https://api.exchangeratesapi.io/latest";
 
 function App() {
+  const [currencyOptions, setCurrencyOptions] = useState([]);
+  console.log(currencyOptions);
   useEffect(() => {
     fetch(Link)
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {
+        setCurrencyOptions([data.base, ...Object.keys(data.rates)]);
+      });
   }, []);
   return (
     <>
       <h1>Convert Amount</h1>
       <Currency />
-      <div classname="equals">=</div>
+      <div className="equals">=</div>
       <Currency />
     </>
   );
