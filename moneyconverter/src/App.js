@@ -32,6 +32,7 @@ function App() {
         setExchangeRate(data.rates[firstCurrency]);
       });
   }, []);
+
   return (
     <>
       <h1>Convert Amount</h1>
@@ -39,6 +40,7 @@ function App() {
         currencyOptions={currencyOptions}
         selectedCurrency={fromCurrency}
         onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+        onChangeAmount={handleFromAmountChange}
         amount={fromAmount}
       />
       <div className="equals">=</div>
