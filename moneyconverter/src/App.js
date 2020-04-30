@@ -7,7 +7,7 @@ function App() {
     <>
       <h1>Convert Amount</h1>
       <Currency />
-      <div>=</div>
+      <div classname="equals">=</div>
       <Currency />
     </>
   );
