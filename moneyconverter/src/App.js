@@ -17,9 +17,9 @@ function App() {
   return (
     <>
       <h1>Convert Amount</h1>
-      <Currency />
+      <Currency currencyOptions={currencyOptions} />
       <div className="equals">=</div>
-      <Currency />
+      <Currency currencyOptions={currencyOptions} />
     </>
   );
 }
