@@ -8,6 +8,18 @@ function App() {
   const [currencyOptions, setCurrencyOptions] = useState([]);
   const [fromCurrency, setFromCurrency] = useState();
   const [toCurrency, setToCurrency] = useState();
+  const [exchangeRate, setExchangeRate] = useState();
+  const [amount, setAmount] = useState(1);
+  const [amountInFromCurrency, setAmountInFromCurrency] = useState();
+
+  let toAmount, fromAmount;
+  if (amountInFromCurrency) {
+    fromAmount = amount;
+    toAmount = amount * exchangeRate;
+  } else {
+    toAmount = amount;
+    fromAmount = amount / exchangeRate;
+  }
 
   useEffect(() => {
     fetch(Link)
@@ -17,6 +29,7 @@ function App() {
         setCurrencyOptions([data.base, ...Object.keys(data.rates)]);
         setFromCurrency(data.base);
         setToCurrency(firstCurrency);
+        setExchangeRate(data.rates[firstCurrency]);
       });
   }, []);
   return (
@@ -26,12 +39,14 @@ function App() {
         currencyOptions={currencyOptions}
         selectedCurrency={fromCurrency}
         onChangeCurrency={(e) => setFromCurrency(e.target.value)}
+        amount={fromAmount}
       />
       <div className="equals">=</div>
       <Currency
         currencyOptions={currencyOptions}
         selectedCurrency={toCurrency}
         onChangeCurrency={(e) => setToCurrency(e.target.value)}
+        amount={toAmount}
       />
     </>
   );
