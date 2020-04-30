@@ -7,7 +7,7 @@ const Link = "https://api.exchangeratesapi.io/latest";
 function App() {
   const [currencyOptions, setCurrencyOptions] = useState([]);
   const [fromCurrency, setFromCurrency] = useState();
-  const [toCurrency, setToCurrency] = use();
+  const [toCurrency, setToCurrency] = useState();
 
   useEffect(() => {
     fetch(Link)
@@ -22,9 +22,15 @@ function App() {
   return (
     <>
       <h1>Convert Amount</h1>
-      <Currency currencyOptions={currencyOptions} />
+      <Currency
+        currencyOptions={currencyOptions}
+        selectedCurrency={fromCurrency}
+      />
       <div className="equals">=</div>
-      <Currency currencyOptions={currencyOptions} />
+      <Currency
+        currencyOptions={currencyOptions}
+        selectedCurrency={toCurrency}
+      />
     </>
   );
 }

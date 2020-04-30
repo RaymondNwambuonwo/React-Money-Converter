@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
 function Currency(props) {
-  const { currencyOptions } = props;
+  const { currencyOptions, selectedCurrency } = props;
   return (
     <div>
       <input type="number" className="input" />
-      <select>
+      <select value={selectedCurrency}>
         {currencyOptions.map((option) => (
           <option key={option} value={option}>
             {option}
