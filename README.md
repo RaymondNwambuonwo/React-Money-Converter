@@ -15,6 +15,8 @@ This was a fun project to do as I continue to learn ore about React and its ease
 
 ![Currency Converter](https://user-images.githubusercontent.com/54545904/80737966-50240000-8ae2-11ea-9263-0a121caef820.gif)
 
+# Future Development
+In the near future I will be adding a more dynamic aestetic to this application.
 
 # Use
 * Fork the repository
