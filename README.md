@@ -3,12 +3,12 @@
 # About
 This was a fun project to do as I continue to learn ore about React and its ease of use (at times). The purpose of this project was to understand and implement the use of the hooks useState & useEffect, data binding, and utilize and interac with APIs using react. For this simple application, I chose to work with an external API, exchange rates, and create a currency covnerter where the user can convert any currency they select from a drop down menu.
 
-## Technologies Used
+# Technologies Used
 * React
 * HTML
 * CSS
 
-## Concepts Focused On:
+# Concepts Focused On:
 * React Hooks (useState & useEffect)
 * External API
 * State & Props
@@ -18,7 +18,9 @@ This was a fun project to do as I continue to learn ore about React and its ease
 # Future Development
 In the near future I will be adding a more dynamic aestetic to this application.
 
-# Use
-* Fork the repository
-* Clone the repository
+# Use and/or access on local server
+* Fork and clone repository
+* Switch into directory
+* Run npm install
+* Run npm start
 * Enjoy!
