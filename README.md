@@ -1,7 +1,7 @@
 # React-Money-Converter
 
 # About
-This was a fun project to do as I continue to learn ore about React and its ease of use (at times). The purpose of this project was to understand and implement the use of the hooks useState & useEffect, data binding, and utilize and interact with APIs using react. For this simple application, I chose to work with an external API, exchange rates, and create a currency covnerter where the user can convert any currency they select from a drop down menu.
+This was a fun project to do as I continue to learn more about React and its ease of use (at times). The purpose of this project was to understand and implement the use of the hooks useState & useEffect, data binding, and utilize and interact with APIs using react. For this simple application, I chose to work with an external API, exchange rates, and create a currency covnerter where the user can convert any currency they select from a drop down menu.
 
 # Technologies Used
 * React
